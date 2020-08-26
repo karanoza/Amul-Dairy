@@ -21,95 +21,121 @@
   <body>
     <div class="container">
       <!-- Nav Bar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+      <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <!-- Just an image -->
+        <nav class="navbar navbar-dark">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="./images/logo-dans-meat-yogurt.svg"
+              width="190"
+              height="150"
+              alt=""
+            />
+          </a>
+        </nav>
+
         <button
           class="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown btn btn-outline-light mr-3">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
-                id="navbarDropdown"
+                id="navbarDropdownMenuLink"
                 role="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Dropdown
+                Products
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+              <div
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <a class="dropdown-item" href="#">Cheese</a>
+                <a class="dropdown-item" href="#">Butter</a>
+                <a class="dropdown-item" href="#">Yogurt</a>
               </div>
             </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
+            <li class="nav-item btn btn-outline-light mr-3">
+              <a class="nav-link" href="#"
+                >Order <span class="sr-only">(current)</span></a
               >
             </li>
+
+            <li class="nav-item btn btn-outline-light mr-3">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </nav>
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">
-          This is a simple hero unit, a simple jumbotron-style component for
-          calling extra attention to featured content or information.
-        </p>
-        <hr class="my-4" />
-        <p>
-          It uses utility classes for typography and spacing to space content
-          out within the larger container.
-        </p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <div class="row">
+          <div class="col-12 col-md-7 text-center text-md-left">
+            <h1 class="display-3 text-white drop-shadow">Thick & Creamy</h1>
+            <p class="lead">With real meat chunks</p>
+
+            <a
+              class="btn btn-outline-light btn-lg mt-4 px-5 py-3 mb-5 mb-md-0"
+              href="#"
+              role="button"
+              >Pricing</a
+            >
+          </div>
+          <div class="col-12 col-md-5">
+            <img src="./images/hero1.png" class="img-fluid" alt="yogurt " />
+          </div>
+        </div>
       </div>
+
+      <!-- Founder's Message -->
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <img src="./images/iwc profile.jpg" class="img-fluid" alt="" />
+        </div>
+        <div
+          class="col-12 col-md-8 bg-white p-5 d-flex align-items-center border border-dark"
+        >
+          <section>
+            <h2>Message from our founder</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+              tenetur alias illo asperiores molestiae quis natus dolore sunt
+              repellendus dicta. Ratione quam illum dolores impedit commodi
+              quae, quos ad ex itaque iste dolor quo qui odit rem architecto
+              sequi cum iure excepturi voluptas praesentium perferendis. Saepe
+              laudantium quis veritatis unde delectus perferendis facilis?
+              Praesentium exercitationem, sint impedit accusantium ipsum
+              suscipit mollitia aliquid, perferendis ut ab minima ipsam
+              voluptatem dolore a? Consequatur aliquam reiciendis dolore soluta
+              quasi, consectetur consequuntur et praesentium incidunt repellat
+              enim eaque aut!
+            </p>
+          </section>
+        </div>
+      </div>
+
       <!-- Carousel -->
 
       <div
         id="carouselExampleControls"
-        class="carousel slide"
+        class="carousel slide d-none d-md-block carousel-fade"
         data-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item active" data-interval="500">
             <img src="./images/yogurt-1.png" class="d-block w-100" alt="..." />
           </div>
           <div class="carousel-item">
@@ -141,39 +167,41 @@
 
       <!-- Cards -->
 
-      <div class="card" style="width: 18rem">
-        <img src="./images/product1.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="card-deck my-5">
+        <div class="card shadow" style="width: 18rem">
+          <img src="./images/product1.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Cheese</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+          </div>
         </div>
-      </div>
 
-      <div class="card" style="width: 18rem">
-        <img src="./images/product2.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card shadow" style="width: 18rem">
+          <img src="./images/product2.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Butter</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+          </div>
         </div>
-      </div>
 
-      <div class="card" style="width: 18rem">
-        <img src="./images/product3.png" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="card shadow" style="width: 18rem">
+          <img src="./images/product3.png" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Yogurt</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
+          </div>
         </div>
       </div>
     </div>
